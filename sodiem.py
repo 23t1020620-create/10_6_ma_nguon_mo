@@ -25,9 +25,6 @@ STUDENTS = {
     "23T1020006": {"name": "Võ Quốc Khánh", "lop": "K47C",
     "scores": {"PMMNM": 7.5,"MMT": 8.0}},
 }
-# =========================
-# TRANG CHỦ
-# =========================
 
 @app.route("/")
 def home():
@@ -276,9 +273,6 @@ def home():
     """
 
 
-# =========================
-# API
-# =========================
 
 @app.route("/api/students")
 def api_students():
@@ -296,10 +290,6 @@ def diem_tb(scores):
 
     return sum(scores.values()) / len(scores)
 
-
-# =========================
-# XẾP LOẠI
-# =========================
 
 def xep_loai(dtb):
 
@@ -319,9 +309,6 @@ def xep_loai(dtb):
         return "Yếu"
 
 
-# =========================
-# CÂU 2 - DANH SÁCH
-# =========================
 
 @app.route("/students")
 def student_list():
@@ -615,9 +602,6 @@ def student_list():
     return html
 
 
-# =========================
-# CÂU 3 - CHI TIẾT
-# =========================
 
 @app.route("/students/<mssv>")
 def student_detail(mssv):
@@ -794,9 +778,6 @@ def student_detail(mssv):
     return html
 
 
-# =========================
-# CÂU 4 - LINK RÚT GỌN
-# =========================
 
 @app.route("/sv/<mssv>")
 def short_student(mssv):
@@ -820,9 +801,6 @@ def short_student(mssv):
     )
 
 
-# =========================
-# CÂU 5 - XUẤT CSV
-# =========================
 
 @app.route("/students/<mssv>/export")
 def export_csv(mssv):
@@ -861,9 +839,6 @@ def export_csv(mssv):
     return response
 
 
-# =========================
-# CÂU 6 - TÌM KIẾM
-# =========================
 
 @app.route("/search")
 def search():
@@ -1121,10 +1096,6 @@ def search():
 
     return html
 
-
-# =========================
-# CHẠY SERVER
-# =========================
 
 if __name__ == "__main__":
     app.run(debug=True)
