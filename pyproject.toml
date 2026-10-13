@@ -1,2 +1,10 @@
+[project]
+name = "10-6-ma-nguon-mo"
+version = "1.0.0"
+requires-python = ">=3.9"
+dependencies = [
+    "flask",
+]
+
 [tool.vercel]
-entrypoint = "sodiem:app"
+entrypoint = "sodiem.py"
